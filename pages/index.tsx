@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { getProductsInCollection } from "../lib/shopify";
 import ProductList from "../components/ProductList";
 import Hero from "../components/Hero";
