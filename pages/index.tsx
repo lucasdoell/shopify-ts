@@ -5,8 +5,9 @@ import ProductList from "../components/ProductList";
 import Hero from "../components/Hero";
 import SEO from "../components/SEO";
 import Script from "next/script";
+import type { ProductEdge } from "@/types/shopify";
 
-export default function Home({ products }) {
+export default function Home({ products }: { products: ProductEdge[] }) {
   return (
     <main className="bg-white dark:bg-slate-900">
       <div className="bg-white dark:bg-slate-900">

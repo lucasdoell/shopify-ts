@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, ReactNode } from "react";
 import { createCheckout, updateCheckout } from "@/lib/shopify";
-import { CartItem } from "@/types/shopify";
+import type { CartItem } from "@/types/shopify";
 
 type CartContextType = {
   cart: CartItem[];

@@ -1,7 +1,7 @@
 import { Fragment, useContext, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { CartContext } from "@/context/shopContext";
 import { formatter } from "@/utils/helpers";
@@ -98,10 +98,9 @@ export default function MiniCart({ cart }: any) {
                                         <Link
                                           href={`/products/${product.handle}`}
                                           passHref
+                                          onClick={() => setCartOpen(false)}
                                         >
-                                          <a onClick={() => setCartOpen(false)}>
-                                            {product.title}
-                                          </a>
+                                          {product.title}
                                         </Link>
                                       </h3>
                                       <p className="ml-4">
