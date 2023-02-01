@@ -87,8 +87,11 @@ export default function MiniCart({ cart }) {
                                     <div>
                                       <div className="flex justify-between text-base font-medium text-gray-900 dark:text-gray-100">
                                         <h3>
-                                          <Link href={`/products/${product.handle}`} passHref>
-                                            <a onClick={() => setCartOpen(false)}>{product.title}</a>
+                                          <Link
+                                            href={`/products/${product.handle}`}
+                                            passHref
+                                            onClick={() => setCartOpen(false)}>
+                                            {product.title}
                                           </Link>
                                         </h3>
                                         <p className="ml-4">{formatter.format(product.variantPrice)}</p>
@@ -157,5 +160,5 @@ export default function MiniCart({ cart }) {
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }
